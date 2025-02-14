@@ -10,3 +10,9 @@ license.workspace = true
 
 [dependencies]
 anyhow = { workspace = true }
+candle-core = { workspace = true }
+candle-datasets = { workspace = true }
+candle-nn = { workspace = true }
+
+[features]
+cuda = ["candle-core/cuda", "candle-nn/cuda"]
