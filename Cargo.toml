@@ -1,7 +1,7 @@
 [workspace]
 resolver = "2"
 
-members = ["cli", "examples", "types"]
+members = ["cli", "examples", "macros", "types"]
 
 [workspace.package]
 version = "0.1.0"
