@@ -34,11 +34,11 @@ pub fn create_sample_vocab() -> Result<BTreeMap<String, i32>> {
     let mut tokens: Vec<String> = pattern
         .split(&content)
         .filter_map(|s| {
-            let trimmed = s.unwrap().trim();
+            let trimmed = s.ok()?.trim();
             (!trimmed.is_empty()).then(|| trimmed.to_string())
         })
         .chain(pattern.find_iter(&content).filter_map(|m| {
-            let delim = m.unwrap().as_str().trim();
+            let delim = m.ok()?.as_str().trim();
             (!delim.is_empty()).then(|| delim.to_string())
         }))
         .collect();
