@@ -24,7 +24,7 @@ impl Example for EG01 {
 
 #[metadata(
     id = "02.02",
-    description = "usage of `listings::ch02::sample_create_vocab`",
+    description = "usage of `listings::ch02::create_sample_vocab`",
     page = "35"
 )]
 pub struct EG02;
