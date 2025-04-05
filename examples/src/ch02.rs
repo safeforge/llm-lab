@@ -13,6 +13,8 @@ impl Example for EG01 {
     fn main(&self) -> anyhow::Result<()> {
         let content = listings::ch02::load_sample_text()?;
 
+        assert_eq!(content.len(), 20479);
+
         println!("Total number of character: {:?}", content.len());
         println!("{:?}", &content[..99]);
 
