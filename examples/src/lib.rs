@@ -7,5 +7,6 @@ pub static REGISTER: LazyLock<HashMap<&'static str, Box<dyn Example>>> = LazyLoc
     let mut m: HashMap<&'static str, Box<dyn Example + 'static>> = HashMap::new();
 
     m.insert("02.01", Box::new(ch02::EG01));
+    m.insert("02.02", Box::new(ch02::EG02));
     m
 });

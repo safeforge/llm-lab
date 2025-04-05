@@ -19,3 +19,25 @@ impl Example for EG01 {
         Ok(())
     }
 }
+
+#[metadata(
+    id = "02.02",
+    description = "usage of `listings::ch02::sample_create_vocab`",
+    page = "35"
+)]
+pub struct EG02;
+
+impl Example for EG02 {
+    fn main(&self) -> anyhow::Result<()> {
+        let vocab = listings::ch02::create_sample_vocab()?;
+
+        assert_eq!(vocab.len(), 1130);
+
+        vocab
+            .iter()
+            .take(50)
+            .for_each(|(k, v)| println!("{}: {}", k, v));
+
+        Ok(())
+    }
+}
