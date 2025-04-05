@@ -36,7 +36,10 @@ fn run(args: Cli) -> Result<()> {
             let example = examples::REGISTER.get(&id[..]);
 
             match example {
-                Some(example) => example.main(),
+                Some(example) => {
+                    println!("--\n{}\n--", example.to_desc());
+                    example.main()
+                }
                 None => bail!("Example {id} not found"),
             }
         }
